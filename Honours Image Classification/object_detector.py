@@ -93,6 +93,10 @@ class LivePredictor:
             and self.thread.is_alive()
             and not self.stop_event.is_set()
         )
+    
+    def clear_predictions(self):
+        with self.lock:
+            self.predictions.clear()
 
     def wait_until_running(self, timeout: Optional[float] = None) -> bool:
         """Wait until the prediction window is active."""
