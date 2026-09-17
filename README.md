@@ -1,6 +1,11 @@
 # handy-cleaner-lerobot
 TU/e Honors Academy AI Track Project: Handy-Cleaner robot vacuum with LeRobot SO-101 hand.
 
+<p align="center">
+  <img src="assets/demo1.gif" width="45%" alt="Demo 1">
+  <img src="assets/demo2.gif" width="45%" alt="Demo 2">
+</p>
+
 ## Set-up:
 	conda activate lerobot
 	cd lerobot
