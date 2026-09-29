@@ -27,22 +27,17 @@ TU/e Honors Academy, AI track, 2025–2026. Three-person team, tutor Bram Groote
 ## Pipeline
 
 ```mermaid
-flowchart LR
-    subgraph Offline
-        A[Teleoperation<br/>leader → follower arm] -->|lerobot-record| B[(Demonstration datasets<br/>per class)]
-        B -->|SLURM job on TU/e HPC<br/>lerobot-train| C[ACT policy per class]
-    end
-    subgraph On the robot
-        D[Front camera] --> E[YOLO11s detector]
-        E --> F[Sum confidence over a<br/>time window vs threshold]
-        F -->|Toy| G[Toy ACT policy]
-        F -->|Scrap paper| H[Paper ACT policy]
-        G --> I[SO-101 arm drops<br/>object into its bin]
-        H --> I
-        I -->|back to monitoring| D
-    end
+flowchart TD
+    D["Front camera"] --> E["YOLO11s detector"]
+    E --> F["Sum confidence over a time window,<br/>act only above threshold"]
+    A["Teleoperation<br/>leader arm → follower arm"] -->|lerobot-record| B[("Demonstration datasets<br/>one per class")]
+    B -->|"lerobot-train, SLURM on TU/e HPC"| C["ACT policy per class"]
+    F -->|toy| G["Toy ACT policy"]
+    F -->|scrap paper| H["Paper ACT policy"]
     C -.-> G
     C -.-> H
+    G --> I["Arm drops the object<br/>into its bin"]
+    H --> I
 ```
 
 1. **Demonstrations.** An operator teleoperates the follower arm with the leader arm. LeRobot
