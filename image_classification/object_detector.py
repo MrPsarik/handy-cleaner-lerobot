@@ -48,26 +48,38 @@ class LivePredictor:
         self.running = False
         self.stop_event = threading.Event()
         self.ready_event = threading.Event()
+        self.open_failed_event = threading.Event()
         self.lock = threading.Lock()
-        
 
         # Keep recent predictions in memory
         self.predictions = deque()
 
-    def start(self):
-        """Start live prediction in a background thread."""
+    def start(self, timeout: float = 20.0):
+        """Start live prediction in a background thread.
+
+        Returns once the first frame is captured (ready), and raises promptly
+        if the capture thread fails to open the device — instead of waiting
+        out the full timeout.
+        """
         if self.running:
             return
+
+        self.ready_event.clear()
+        self.open_failed_event.clear()
 
         self.thread = threading.Thread(target=self._run, daemon=False)
         self.thread.start()
 
-        # Wait until first frame is shown
-        started = self.ready_event.wait(timeout=20)
-        if not started:
-            raise RuntimeError("Prediction window did not start in time.")
+        deadline = time.time() + timeout
+        while time.time() < deadline:
+            if self.ready_event.is_set():
+                self.running = True
+                return
+            if self.open_failed_event.is_set():
+                raise RuntimeError(f"Camera {self.camera} failed to open.")
+            time.sleep(0.05)
 
-        self.running = True
+        raise RuntimeError("Prediction window did not start in time.")
 
     def stop(self):
         """Stop prediction and clean up."""
@@ -87,13 +99,92 @@ class LivePredictor:
         cv2.destroyAllWindows()
         self.running = False
 
+    def release_camera(self):
+        """Release the camera + capture thread but KEEP the model loaded.
+
+        Use this to temporarily hand the camera device to another process
+        (e.g. a lerobot rollout) without unloading YOLO. The capture thread
+        is stopped and the VideoCapture is released, then the stop/ready
+        events are reset so the thread can be restarted by reacquire_camera().
+        """
+        self.stop_event.set()
+
+        if self.thread is not None:
+            self.thread.join(timeout=5)
+            if self.thread.is_alive():
+                print(
+                    f"WARNING: capture thread for camera {self.camera} did not "
+                    "stop (blocked read?); the device may stay held until it "
+                    "unblocks."
+                )
+            self.thread = None
+
+        if self.cap is not None:
+            self.cap.release()
+            self.cap = None
+
+        if self.writer is not None:
+            self.writer.release()
+            self.writer = None
+
+        cv2.destroyAllWindows()
+        self.running = False
+
+        # Reset so the capture thread can be cleanly restarted.
+        self.stop_event.clear()
+        self.ready_event.clear()
+        self.open_failed_event.clear()
+
+    def _camera_is_available(self) -> bool:
+        """Cheap probe: can we open the device AND grab one frame?
+
+        Opens a short-lived V4L2 handle in the *calling* thread and releases
+        it immediately, so this never leaves a capture thread stuck on a
+        contended device. ``grab()`` (not just ``isOpened()``) is the real
+        test, because a busy V4L2 device often opens but cannot stream.
+        """
+        cap = cv2.VideoCapture(self.camera, cv2.CAP_V4L2)
+        try:
+            return cap.isOpened() and cap.grab()
+        finally:
+            cap.release()
+
+    def reacquire_camera(self, attempts: int = 15, retry_delay_s: float = 0.4):
+        """Re-open the camera and restart the capture thread.
+
+        Waits (via a cheap probe) until the previous holder's device handle
+        has actually been released, then starts a single capture thread. The
+        already-loaded model is reused, so this does NOT reload YOLO, and no
+        capture thread is ever spawned against a contended device — avoiding
+        leaked threads that would keep grabbing the camera.
+        """
+        for attempt in range(1, attempts + 1):
+            if self._camera_is_available():
+                try:
+                    self.start()
+                    self.clear_predictions()
+                    return
+                except RuntimeError as err:
+                    # Probe passed but the thread still didn't produce a frame;
+                    # tear it down before retrying so nothing is left holding
+                    # the device.
+                    self.release_camera()
+                    print(f"Reacquire start failed (attempt {attempt}/{attempts}): {err}")
+            else:
+                print(f"Camera {self.camera} still busy (attempt {attempt}/{attempts})")
+            time.sleep(retry_delay_s)
+
+        raise RuntimeError(
+            f"Failed to reacquire camera {self.camera} after {attempts} attempts"
+        )
+
     def is_running(self) -> bool:
         return (
             self.thread is not None
             and self.thread.is_alive()
             and not self.stop_event.is_set()
         )
-    
+
     def clear_predictions(self):
         with self.lock:
             self.predictions.clear()
@@ -102,7 +193,7 @@ class LivePredictor:
         """Wait until the prediction window is active."""
         return self.ready_event.wait(timeout=timeout)
 
-    def get_weighted_class(self, seconds: float, threshold_average_confidence_per_frame: float = 0.5) -> Optional[int]:
+    def get_weighted_class(self, seconds: float, threshold_average_confidence_per_frame: float = 0.35) -> Optional[int]:
         """
         Wait `seconds`, then return the class id with the highest
         total confidence over that period.
@@ -138,62 +229,71 @@ class LivePredictor:
         best_class = max(scores, key=scores.get)
         best_score = scores[best_class]
 
-        #Calculate if the best score is above the required threshold
+        # Calculate if the best score is above the required threshold
         min_total_confidence = threshold_average_confidence_per_frame * 30 * seconds
         print(min_total_confidence)
 
         if best_score < min_total_confidence:
             return None
-        
+
         return best_class, self.model.names[best_class]
 
     def _run(self):
-        self.cap = cv2.VideoCapture(self.camera)
-        if not self.cap.isOpened():
-            return
+        try:
+            self.cap = cv2.VideoCapture(self.camera, cv2.CAP_V4L2)
+            if not self.cap.isOpened():
+                # Release the failed handle so a retry starts from a clean slate.
+                self.cap.release()
+                self.cap = None
+                return
 
-        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, self.width)
-        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, self.height)
+            self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, self.width)
+            self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, self.height)
 
-        if self.save is not None:
-            fourcc = cv2.VideoWriter_fourcc(*"mp4v")
-            fps = self.cap.get(cv2.CAP_PROP_FPS)
-            if fps <= 0:
-                fps = 30.0
+            if self.save is not None:
+                fourcc = cv2.VideoWriter_fourcc(*"mp4v")
+                fps = self.cap.get(cv2.CAP_PROP_FPS)
+                if fps <= 0:
+                    fps = 30.0
 
-            frame_width = int(self.cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-            frame_height = int(self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+                frame_width = int(self.cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+                frame_height = int(self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
-            self.writer = cv2.VideoWriter(
-                self.save,
-                fourcc,
-                fps,
-                (frame_width, frame_height),
-            )
+                self.writer = cv2.VideoWriter(
+                    self.save,
+                    fourcc,
+                    fps,
+                    (frame_width, frame_height),
+                )
 
-        while not self.stop_event.is_set():
-            ret, frame = self.cap.read()
-            if not ret:
-                break
+            while not self.stop_event.is_set():
+                ret, frame = self.cap.read()
+                if not ret:
+                    break
 
-            results = self.model(frame, imgsz=self.imgsz, conf=self.conf, verbose=False)
-            result = results[0]
+                results = self.model(frame, imgsz=self.imgsz, conf=self.conf, verbose=False)
+                result = results[0]
 
-            self._store_best_prediction(result)
+                self._store_best_prediction(result)
 
-            annotated_frame = result.plot()
-            cv2.imshow(self.window_name, annotated_frame)
+                annotated_frame = result.plot()
+                cv2.imshow(self.window_name, annotated_frame)
 
+                if not self.ready_event.is_set():
+                    self.ready_event.set()
+
+                if self.writer is not None:
+                    self.writer.write(annotated_frame)
+
+                key = cv2.waitKey(1) & 0xFF
+                if key == ord("q"):
+                    self.stop_event.set()
+                    break
+        finally:
+            # If we never produced a frame, the device wasn't usable — tell
+            # start() immediately instead of letting it wait out the timeout.
             if not self.ready_event.is_set():
-                self.ready_event.set()
-
-            if self.writer is not None:
-                self.writer.write(annotated_frame)
-
-            key = cv2.waitKey(1) & 0xFF
-            if key == ord("q"):
-                self.stop_event.set()
-                break
+                self.open_failed_event.set()
 
     def _store_best_prediction(self, result):
         """Store only the highest-confidence detection from this frame."""
