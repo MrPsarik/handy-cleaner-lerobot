@@ -21,7 +21,7 @@ TU/e Honors Academy, AI track, 2025–2026. Three-person team, tutor Bram Groote
 | Cameras | Two USB cameras, both 640×480 at 30 fps for the policies. **Front** is on the base, looks at the floor ahead and also feeds the detector. **Top** is near the gripper and gives a top-down view during the pick. |
 | Base | 3D-printed (PLA) mobile base, designed in Siemens NX with topology optimization. It carries the arm, two side-mounted bins and a tricycle wheel layout (two powered rear wheels, one passive ball wheel). Mass went from 4.2 kg to 1.8 kg. The current prototype works from a fixed position; room navigation is out of scope. |
 | Robot compute | A laptop with a GTX 1060 Mobile (6 GB VRAM) runs detection and the policies. The arm and cameras connect over a USB hub. |
-| Training compute | TU/e HPC cluster, SLURM jobs on an RTX 2080 GPU node. |
+| Training compute | Final policies: a laptop with an RTX 3070 Mobile (8 GB). Before that, the TU/e HPC cluster (SLURM jobs on an RTX 2080 node) and, at the very start, the GTX 1060 laptop. See [Where we trained](#where-we-trained). |
 | Cost | Under €1,000 of hardware, not counting the laptop. |
 
 ## Pipeline
@@ -31,7 +31,7 @@ flowchart TD
     D["Front camera"] --> E["YOLO11s detector"]
     E --> F["Sum confidence over a time window,<br/>act only above threshold"]
     A["Teleoperation<br/>leader arm → follower arm"] -->|lerobot-record| B[("Demonstration datasets<br/>one per class")]
-    B -->|"lerobot-train, SLURM on TU/e HPC"| C["ACT policy per class"]
+    B -->|lerobot-train| C["ACT policy per class"]
     F -->|toy| G["Toy ACT policy"]
     F -->|scrap paper| H["Paper ACT policy"]
     C -.-> G
@@ -43,7 +43,8 @@ flowchart TD
 1. **Demonstrations.** An operator teleoperates the follower arm with the leader arm. LeRobot
    records joint states together with frames from both cameras.
 2. **Training.** One ACT (Action Chunking with Transformers) policy is trained per object class
-   with LeRobot, as SLURM jobs on the TU/e HPC cluster.
+   with LeRobot. The final policies were trained on an RTX 3070 laptop, earlier ones as SLURM
+   jobs on the TU/e HPC cluster.
 3. **Detection.** YOLO11s runs on the front camera feed. The script does not react to a single
    frame. It adds up each class's confidence over a time window and compares the total with
    `window seconds × fps × minimum average confidence per frame`.
@@ -88,14 +89,46 @@ flowchart TD
 |---|---|---|
 | Training steps | 50,000 | 40,000 |
 | Shared settings | chunk size 100, batch size 8, learning rate 1e-5, two cameras (640×480) | same |
-| Hardware | TU/e HPC, SLURM, RTX 2080 | same |
+| Hardware | laptop, RTX 3070 Mobile | same |
 
-- **Why the cluster.** On the laptop (GTX 1060 Mobile), about 100 episodes took close to two
-  days to train. On the cluster, training took hours instead of days.
-<!-- TODO: how long did each final ACT run take on the RTX 2080 (hours, or GPU-hours)? -->
 - **Why ACT.** It is LeRobot's recommended policy for GPUs under 8 GB VRAM and for single-task
   grasp-and-place. It was designed for about 50–100 demonstrations, which matches what we could
   record by hand. ACT was not benchmarked against Diffusion Policy or VQ-BeT.
+
+
+### Where we trained
+
+Training moved between three machines. Every run's settings are in its `train_config.json` on
+the Hugging Face Hub, which is where the numbers below come from.
+
+| When | Machine | Policies | Batch | DataLoader workers | AMP |
+|---|---|---|---|---|---|
+| Dec 2025 | Laptop, GTX 1060 Mobile (6 GB) | `t_policy` (tabletop) | 8 | 4 | no |
+| Feb 2026 | TU/e HPC, SLURM, RTX 2080 node | `PaperBalls`, `PaperBallsExt` | 12, 16 | 0 | yes |
+| Jun 2026 | Laptop, RTX 3070 Mobile (8 GB) | `act_sorttoy`, `act_sortpaper`, `act_sortpaper_subset40` | 8 | 4 | no |
+
+- **GTX 1060 → cluster.** On the GTX 1060, about 100 episodes took close to two days to train.
+- **Getting jobs to run on the cluster.** A batch job starts in a non-interactive shell, so the
+  conda environment was not active and `lerobot-train` was not found. The job script now
+  sources `~/.bashrc` and activates the environment itself. Before each full run, a short
+  interactive job checked the environment first, so a path mistake would not cost a long queue
+  wait.
+- **Slow first runs.** The first jobs trained, but slowly: `nvidia-smi` showed GPU utilisation
+  jumping up and then dropping to idle, which pointed at the GPU waiting for data rather than at
+  the GPU itself.
+- **Speeding up crashed the DataLoader.** A larger batch with mixed precision (AMP) and more
+  DataLoader workers crashed with `RuntimeError: DataLoader worker (pid(s) …) exited
+  unexpectedly`. Lowering the workers to 2 still crashed, and the job had 64 GB of RAM, so
+  memory in general was not the issue. The likely cause is the node's small `/dev/shm`: PyTorch
+  workers pass decoded video frames to the main process through shared memory. (LeRobot also
+  does not take `--gradient_accumulation_steps` as a command-line flag, so that route was out.)
+- **Fix.** `--num_workers=0` loads data in the main process, so no shared memory is needed.
+  With AMP and a batch of 12–16 this trained the February policies without crashes. The cost
+  is that data loading is no longer parallel.
+- **Cluster → RTX 3070 laptop.** For the final policies a laptop with an RTX 3070 Mobile turned
+  out to be faster in practice than the cluster, with no queue either, so we trained there with
+  LeRobot's defaults (4 workers, no AMP). We did not profile why. Likely factors are the newer
+  GPU generation and that data loading could run in parallel workers again.
 
 **YOLO11s detector**
 
@@ -167,7 +200,7 @@ in after the trial run.
 ## Team & my role
 
 **My role:** project management / Scrum master; recording the demonstration datasets;
-launching training on the cluster via SLURM; the policy dispatch and execution loop that runs
+running the training, first as SLURM jobs on the TU/e cluster and later on a local GPU; the policy dispatch and execution loop that runs
 the selected ACT policy after detection, built together with Rovshan Ayyubov.
 
 **Teammates' contributions:**
@@ -299,7 +332,8 @@ python live_detect.py --model best.pt --camera 0   # press q to quit
 
 **Not reproducible from this repo yet:**
 
-- **SLURM job script.** Not in the repo yet. <!-- TODO: add the SLURM job script to the repo. -->
+- **SLURM job script.** The original was lost; [`slurm/train_act.slurm`](slurm/train_act.slurm)
+  is a reconstruction (see [Where we trained](#where-we-trained)).
 - **Integration loop.** The version in `image_classification/` (`fake_robot.py`,
   `policy_manager.py`) is an early one. It replays recorded movements instead of running the
   ACT policies, and `policy_manager.py` is missing `import sys`.
