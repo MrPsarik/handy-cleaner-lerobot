@@ -3,8 +3,8 @@
 #
 # RECONSTRUCTED: the original job script was lost. This follows the settings recorded in
 # the February 2026 runs (MrPsarik/PaperBalls, MrPsarik/PaperBallsExt train_config.json)
-# and the notes from debugging it. Check partition and limits against the cluster docs
-# before use.
+# and the notes from debugging it. Both runs landed on an RTX 2080 Ti node (mcs-gpub001,
+# per W&B); the partition name below is from memory, so check it with `sinfo` before use.
 #
 # Submit:  sbatch slurm/train_act.slurm
 # Watch:   squeue -u $USER    tail -f slurm-<jobid>.out

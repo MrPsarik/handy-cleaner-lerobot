@@ -21,7 +21,7 @@ TU/e Honors Academy, AI track, 2025–2026. Three-person team, tutor Bram Groote
 | Cameras | Two USB cameras, both 640×480 at 30 fps for the policies. **Front** is on the base, looks at the floor ahead and also feeds the detector. **Top** is near the gripper and gives a top-down view during the pick. |
 | Base | 3D-printed (PLA) mobile base, designed in Siemens NX with topology optimization. It carries the arm, two side-mounted bins and a tricycle wheel layout (two powered rear wheels, one passive ball wheel). Mass went from 4.2 kg to 1.8 kg. The current prototype works from a fixed position; room navigation is out of scope. |
 | Robot compute | A laptop with a GTX 1060 Mobile (6 GB VRAM) runs detection and the policies. The arm and cameras connect over a USB hub. |
-| Training compute | Final policies: a laptop with an RTX 3070 Mobile (8 GB). Before that, the TU/e HPC cluster (SLURM jobs on an RTX 2080 node) and, at the very start, the GTX 1060 laptop. See [Where we trained](#where-we-trained). |
+| Training compute | Final policies: a laptop with an RTX 3070 Mobile (8 GB). Before that, the TU/e HPC cluster (SLURM jobs on an RTX 2080 Ti node) and, at the very start, the GTX 1060 laptop. See [Where we trained](#where-we-trained). |
 | Cost | Under €1,000 of hardware, not counting the laptop. |
 
 ## Pipeline
@@ -104,11 +104,34 @@ the Hugging Face Hub, which is where the numbers below come from.
 | When | Machine | Policies | Batch | DataLoader workers | AMP |
 |---|---|---|---|---|---|
 | Dec 2025 | Laptop, GTX 1060 Mobile (6 GB) | `t_policy` (tabletop) | 8 | 4 | no |
-| Feb 2026 | TU/e HPC, SLURM, RTX 2080 node | `PaperBalls`, `PaperBallsExt` | 12, 16 | 0 | yes |
+| Feb 2026 | TU/e HPC, SLURM, RTX 2080 Ti node | `PaperBalls`, `PaperBallsExt` | 12, 16 | 0 | yes |
 | May–Jun 2026 | Laptop, RTX 3070 Mobile (8 GB) | `act_sorttoy`, `act_sortpaper`, `act_sortpaper_subset40` | 8 | 4 | no |
 
-- **GTX 1060 → cluster.** On the GTX 1060, `t_policy` trained at about 1.3 steps/s (W&B), so
-  100,000 steps took close to a day of pure training, and about 100 episodes close to two days.
+- **GTX 1060 → cluster.** On the GTX 1060, `t_policy` took 0.78 s per step, so 100,000 steps
+  ran for 22.4 hours (W&B run `diz5pgoh`).
+- **Trying the cluster's GPUs (6–7 Feb 2026).** We submitted the same ACT job (tabletop
+  dataset `MrPsarik/t`, two cameras) to whatever GPU partitions were free and logged every
+  attempt to W&B: 17 runs, 4 of which reached steady training. The numbers below are the
+  median per-step times LeRobot logs, after warm-up:
+
+  | GPU (node) | Batch | Workers | AMP | Update s/step | Data s/step | Samples/s | Outcome |
+  |---|---|---|---|---|---|---|---|
+  | GTX 1060 Mobile (laptop) | 8 | 4 | no | 0.77 | 0.005 | 10 | 100k steps, 22.4 h |
+  | A30 (`tue-gpua001`) | 8 | 4 | no | 0.40 | 0.003 | 20 | 3,200 steps, then crashed |
+  | A30 (`tue-gpua001`) | 12 | 4 | yes | 0.57 | 0.004 | 21 | 1,200 steps, then crashed |
+  | L4 (`tue-gpub001`) | 48 | 4 | yes | 1.31 | 0.02 | 36 | 400 steps, then crashed |
+  | V100 16 GB (`mcs-gpua001`) | 32 | 0 | yes | 0.61 | 0.40 | 32 | 200 steps, then crashed |
+  | RTX 2080 Ti (`mcs-gpub001`) | 12 | 0 | yes | 0.30 | 0.16 | 26 | `PaperBalls`, 120k steps, 16.5 h |
+  | RTX 2080 Ti (`mcs-gpub001`) | 16 | 0 | yes | 0.38 | 0.20 | 28 | `PaperBallsExt`, 100k steps, 16.0 h |
+
+  Ten more attempts (batch 16–64 on A30, V100 and L4, and one two-GPU run on two A30s) failed
+  within seconds, before the first logged step. The L4 and V100 rows rest on one or two
+  logged points, so treat them as rough.
+- **What the numbers say.** Moving from the GTX 1060 to any cluster GPU doubled to tripled the
+  throughput, not more: these are short ACT runs on a small model, where GPU generation
+  matters less than it does on paper. With `num_workers=0` (2080 Ti, V100), loading data took
+  0.16–0.40 s of every step, a third or more of the step time, against about 0.005 s with
+  four workers. That was the price of the DataLoader fix below.
 - **Getting jobs to run on the cluster.** A batch job starts in a non-interactive shell, so the
   conda environment was not active and `lerobot-train` was not found. The job script now
   sources `~/.bashrc` and activates the environment itself. Before each full run, a short
@@ -129,7 +152,8 @@ the Hugging Face Hub, which is where the numbers below come from.
 - **Cluster → RTX 3070 laptop.** For the final policies a laptop with an RTX 3070 Mobile turned
   out to be faster in practice than the cluster, with no queue either, so we trained there with
   LeRobot's defaults (4 workers, no AMP). `act_sortpaper` (40,000 steps from scratch) started at
-  18:45 and was on the Hub at 20:10, so about 1.5 hours, roughly 8 steps/s. `act_sorttoy` was
+  18:45 and was on the Hub at 20:10, so about 1.5 hours, roughly 8 steps/s (W&B was off for the final runs, so this comes from
+  the shell history and the Hub upload time, not from a training log). `act_sorttoy` was
   first trained for 20,000 steps and later resumed to 50,000. We did not profile why the laptop
   beat the cluster. Likely factors are the newer GPU generation and that data loading could run
   in parallel workers again.
