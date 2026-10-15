@@ -105,9 +105,13 @@ the Hugging Face Hub, which is where the numbers below come from.
 |---|---|---|---|---|---|
 | Dec 2025 | Laptop, GTX 1060 Mobile (6 GB) | `t_policy` (tabletop) | 8 | 4 | no |
 | Feb 2026 | TU/e HPC, SLURM, RTX 2080 node | `PaperBalls`, `PaperBallsExt` | 12, 16 | 0 | yes |
-| Jun 2026 | Laptop, RTX 3070 Mobile (8 GB) | `act_sorttoy`, `act_sortpaper`, `act_sortpaper_subset40` | 8 | 4 | no |
+| May–Jun 2026 | Laptop, RTX 3070 Mobile (8 GB) | `act_sorttoy`, `act_sortpaper` | 8 | 4 | no |
 
-- **GTX 1060 → cluster.** On the GTX 1060, about 100 episodes took close to two days to train.
+`act_sortpaper_subset40` (40 of the 60 paper episodes, 11 June) is not in this table: where it
+was trained is not recorded.
+
+- **GTX 1060 → cluster.** On the GTX 1060, `t_policy` trained at about 1.3 steps/s (W&B), so
+  100,000 steps took close to a day of pure training, and about 100 episodes close to two days.
 - **Getting jobs to run on the cluster.** A batch job starts in a non-interactive shell, so the
   conda environment was not active and `lerobot-train` was not found. The job script now
   sources `~/.bashrc` and activates the environment itself. Before each full run, a short
@@ -127,8 +131,18 @@ the Hugging Face Hub, which is where the numbers below come from.
   is that data loading is no longer parallel.
 - **Cluster → RTX 3070 laptop.** For the final policies a laptop with an RTX 3070 Mobile turned
   out to be faster in practice than the cluster, with no queue either, so we trained there with
-  LeRobot's defaults (4 workers, no AMP). We did not profile why. Likely factors are the newer
-  GPU generation and that data loading could run in parallel workers again.
+  LeRobot's defaults (4 workers, no AMP). `act_sortpaper` (40,000 steps from scratch) started at
+  18:45 and was on the Hub at 20:10, so about 1.5 hours, roughly 8 steps/s. `act_sorttoy` was
+  first trained for 20,000 steps and later resumed to 50,000. We did not profile why the laptop
+  beat the cluster. Likely factors are the newer GPU generation and that data loading could run
+  in parallel workers again.
+- **Running the policies on the robot laptop (GTX 1060).** The first rollouts ran the control
+  loop at about 3.5 Hz instead of 30 Hz: inference had silently fallen back to the CPU. The
+  installed PyTorch wheels (cu128) ship no kernels for the GTX 1060's architecture (sm_61,
+  Pascal), and the driver only supported CUDA 12.2. Installing PyTorch from the cu126 index
+  fixed it; `torch.cuda.get_arch_list()` confirms that `sm_61` is included. Around the same
+  time LeRobot dropped `--policy.path` from `lerobot-record`, so the policies are run with
+  `lerobot-rollout` instead (see [Run a trained policy](#run-a-trained-policy)).
 
 **YOLO11s detector**
 
@@ -287,27 +301,47 @@ lerobot-replay \
 ```
 
 ### Train an ACT policy
+The command used for the final toy policy (RTX 3070 laptop):
 ```bash
 lerobot-train \
-    --dataset.repo_id="MrPsarik/t" \
+    --dataset.repo_id=MrPsarik/SortToy_20260527_143413 \
     --policy.type=act \
-    --output_dir=outputs/train/t_policy \
-    --job_name=t_policy \
     --policy.device=cuda \
-    --wandb.enable=true \
-    --policy.repo_id="MrPsarik/t_policy" \
+    --policy.repo_id=MrPsarik/act_sorttoy \
+    --output_dir=outputs/train/act_sorttoy \
+    --job_name=act_sorttoy \
+    --batch_size=8 \
+    --steps=20000 \
     --save_freq=5000 \
-    --steps=100000
+    --wandb.enable=false
 
-# resume
+# resume from the last checkpoint and continue to 50,000 steps
 lerobot-train \
     --resume=true \
-    --steps=100000 \
-    --config_path=outputs/train/t_policy/checkpoints/last/pretrained_model/train_config.json
+    --steps=50000 \
+    --config_path=outputs/train/act_sorttoy/checkpoints/last/pretrained_model/train_config.json
 ```
-The final policies used 50,000 steps (toy) and 40,000 steps (scrap paper). See [Training](#training).
+The scrap-paper policy is the same with `SortPaper_20260529_145930`, `act_sortpaper` and
+`--steps=40000` in one run. For the cluster, see [`slurm/train_act.slurm`](slurm/train_act.slurm).
 
 ### Run a trained policy
+With LeRobot 0.5.x (used for the final policies):
+```bash
+lerobot-rollout --strategy.type=sentry \
+    --policy.path=MrPsarik/act_sorttoy \
+    --policy.device=cuda \
+    --robot.type=so101_follower \
+    --robot.port=/dev/ttyACM0 \
+    --robot.id=follower_arm \
+    --robot.cameras="{front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, top: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+    --dataset.repo_id=MrPsarik/rollout_SortToy_20260527_143413 \
+    --dataset.single_task="Put toy into the right bin"
+```
+On a GTX 10xx GPU install PyTorch from the cu126 index first
+(`pip install --index-url https://download.pytorch.org/whl/cu126 torch torchvision`), or
+inference falls back to the CPU.
+
+Older LeRobot versions (used for the tabletop policies) ran a policy through `lerobot-record`:
 ```bash
 rm -rf ~/.cache/huggingface/lerobot/MrPsarik/eval_t   # clear the eval cache before each run
 
