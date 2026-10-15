@@ -117,16 +117,23 @@ the Hugging Face Hub, which is where the numbers below come from.
   | GPU (node) | Batch | Workers | AMP | Update s/step | Data s/step | Samples/s | Outcome |
   |---|---|---|---|---|---|---|---|
   | GTX 1060 Mobile (laptop) | 8 | 4 | no | 0.77 | 0.005 | 10 | 100k steps, 22.4 h |
-  | A30 (`tue-gpua001`) | 8 | 4 | no | 0.40 | 0.003 | 20 | 3,200 steps, then crashed |
-  | A30 (`tue-gpua001`) | 12 | 4 | yes | 0.57 | 0.004 | 21 | 1,200 steps, then crashed |
+  | A30 MIG slice, 5.8 GiB (`tue-gpua001`) | 8 | 4 | no | 0.40 | 0.003 | 20 | 3,200 steps, then crashed |
+  | A30 MIG slice, 5.8 GiB | 12 | 4 | yes | 0.57 | 0.004 | 21 | 1,200 steps, then crashed |
   | L4 (`tue-gpub001`) | 48 | 4 | yes | 1.31 | 0.02 | 36 | 400 steps, then crashed |
   | V100 16 GB (`mcs-gpua001`) | 32 | 0 | yes | 0.61 | 0.40 | 32 | 200 steps, then crashed |
   | RTX 2080 Ti (`mcs-gpub001`) | 12 | 0 | yes | 0.30 | 0.16 | 26 | `PaperBalls`, 120k steps, 16.5 h |
   | RTX 2080 Ti (`mcs-gpub001`) | 16 | 0 | yes | 0.38 | 0.20 | 28 | `PaperBallsExt`, 100k steps, 16.0 h |
 
-  Ten more attempts (batch 16–64 on A30, V100 and L4, and one two-GPU run on two A30s) failed
-  within seconds, before the first logged step. The L4 and V100 rows rest on one or two
-  logged points, so treat them as rough.
+  The L4 and V100 rows rest on one or two logged points, so treat them as rough. Ten more
+  attempts failed within seconds; W&B kept their console output, so the causes are known:
+
+  | Attempt | Error |
+  |---|---|
+  | A30, batch 16 and 64 | CUDA out of memory: "GPU 0 has a total capacity of 5.81 GiB", with another user's process holding 1.79 GiB of it. The A30 (24 GB) is split with MIG, and a job gets one slice. |
+  | V100, batch 48 and 64; L4, batch 64 | CUDA out of memory at 15.8 GiB and 22 GiB |
+  | V100, 4 and 2 workers | "DataLoader worker … killed by signal: Bus error … out of shared memory" |
+  | V100, `PaperBallsExt`, 4 workers | "unable to write to file </torch_…>: No space left on device" (shared memory again) |
+  | Two A30s with `accelerate` | NCCL "Duplicate GPU detected: rank 0 and rank 1 both on CUDA device …": both processes landed on the same GPU, so multi-GPU training never started |
 - **What the numbers say.** Moving from the GTX 1060 to any cluster GPU doubled to tripled the
   throughput, not more: these are short ACT runs on a small model, where GPU generation
   matters less than it does on paper. With `num_workers=0` (2080 Ti, V100), loading data took
@@ -141,10 +148,11 @@ the Hugging Face Hub, which is where the numbers below come from.
   jumping up and then dropping to idle, which pointed at the GPU waiting for data rather than at
   the GPU itself.
 - **Speeding up crashed the DataLoader.** A larger batch with mixed precision (AMP) and more
-  DataLoader workers crashed with `RuntimeError: DataLoader worker (pid(s) …) exited
-  unexpectedly`. Lowering the workers to 2 still crashed, and the job had 64 GB of RAM, so
-  memory in general was not the issue. The likely cause is the node's small `/dev/shm`: PyTorch
-  workers pass decoded video frames to the main process through shared memory. (LeRobot also
+  DataLoader workers crashed with `DataLoader worker … is killed by signal: Bus error. It is
+  possible that dataloader's workers are out of shared memory`. Lowering the workers to 2 still
+  crashed, and the job had 64 GB of RAM, so ordinary memory was not the issue. PyTorch workers
+  pass decoded video frames to the main process through shared memory (`/dev/shm`), and the
+  nodes have little of it. (LeRobot also
   does not take `--gradient_accumulation_steps` as a command-line flag, so that route was out.)
 - **Fix.** `--num_workers=0` loads data in the main process, so no shared memory is needed.
   With AMP and a batch of 12–16 this trained the February policies without crashes. The cost
