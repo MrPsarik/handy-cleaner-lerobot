@@ -105,10 +105,7 @@ the Hugging Face Hub, which is where the numbers below come from.
 |---|---|---|---|---|---|
 | Dec 2025 | Laptop, GTX 1060 Mobile (6 GB) | `t_policy` (tabletop) | 8 | 4 | no |
 | Feb 2026 | TU/e HPC, SLURM, RTX 2080 node | `PaperBalls`, `PaperBallsExt` | 12, 16 | 0 | yes |
-| May–Jun 2026 | Laptop, RTX 3070 Mobile (8 GB) | `act_sorttoy`, `act_sortpaper` | 8 | 4 | no |
-
-`act_sortpaper_subset40` (40 of the 60 paper episodes, 11 June) is not in this table: where it
-was trained is not recorded.
+| May–Jun 2026 | Laptop, RTX 3070 Mobile (8 GB) | `act_sorttoy`, `act_sortpaper`, `act_sortpaper_subset40` | 8 | 4 | no |
 
 - **GTX 1060 → cluster.** On the GTX 1060, `t_policy` trained at about 1.3 steps/s (W&B), so
   100,000 steps took close to a day of pure training, and about 100 episodes close to two days.
