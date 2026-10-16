@@ -83,9 +83,11 @@ flowchart TD
   policy [`MrPsarik/act_sortpaper`](https://huggingface.co/MrPsarik/act_sortpaper) (40k steps,
   all 60 episodes) and
   [`MrPsarik/act_sortpaper_subset40`](https://huggingface.co/MrPsarik/act_sortpaper_subset40)
-  (40k steps, episodes 0–39, uploaded on 11 June). The integration code
+  (40k steps, episodes 0–39, uploaded on 11 June). In informal trials on the robot the
+  40-episode policy worked better than the one trained on all 60, so the integration code
   ([`policy_manager.py`](image_classification/policy_manager.py)) runs `act_sortpaper_subset40`
-  for scrap paper.
+  for scrap paper. That comparison was not measured, and why fewer episodes did better was
+  not investigated.
 
 **YOLO detector dataset:**
 
