@@ -71,15 +71,21 @@ flowchart TD
   instead.
 - **Earlier datasets.** Before the base existed, tabletop datasets were recorded with a tea bag
   box starting inside a 2–3 cm radius. They were used to learn how much data ACT needs.
-- **No validation split.** Both final policies trained on all episodes (`dataset.episodes` is
-  unset in their `train_config.json`), so there is no held-out loss. The rollouts in Results are
-  the only evaluation.
+- **No validation split.** `act_sorttoy` and `act_sortpaper` trained on all episodes
+  (`dataset.episodes` is unset in their `train_config.json`). `act_sortpaper_subset40` trained
+  on episodes 0–39 of the 60, but the other 20 were never used for a held-out loss. The rollouts
+  in Results are the only evaluation.
 - **Final datasets and policies on the Hub.** Toy: dataset
   [`MrPsarik/SortToy_20260527_143413`](https://huggingface.co/datasets/MrPsarik/SortToy_20260527_143413),
   policy [`MrPsarik/act_sorttoy`](https://huggingface.co/MrPsarik/act_sorttoy) (50k steps).
   Scrap paper: dataset
   [`MrPsarik/SortPaper_20260529_145930`](https://huggingface.co/datasets/MrPsarik/SortPaper_20260529_145930),
-  policy [`MrPsarik/act_sortpaper`](https://huggingface.co/MrPsarik/act_sortpaper) (40k steps).
+  policy [`MrPsarik/act_sortpaper`](https://huggingface.co/MrPsarik/act_sortpaper) (40k steps,
+  all 60 episodes) and
+  [`MrPsarik/act_sortpaper_subset40`](https://huggingface.co/MrPsarik/act_sortpaper_subset40)
+  (40k steps, episodes 0–39, uploaded on 11 June). The integration code
+  ([`policy_manager.py`](image_classification/policy_manager.py)) runs `act_sortpaper_subset40`
+  for scrap paper.
 
 **YOLO detector dataset:**
 
@@ -235,7 +241,9 @@ as failures.
   background, but it is not proof: the sample is small (Fisher's exact test p = 0.15), and
   the surface under the object also changed during the first half of the day.
 - **Caveats.** The sample is small and uncontrolled, and S1 is too small to compare with S2. The
-  recordings do not store which policy checkpoint ran. The `eval_*` datasets on the Hub come from
+  recordings do not store which policy ran. For scrap paper, `act_sortpaper_subset40` was
+  uploaded on 11 June, between S1 and S2, and is the one the integration code runs, so S2 most
+  likely used it and S1 used `act_sortpaper`. The `eval_*` datasets on the Hub come from
   earlier iterations and mix policy runs with teleoperated recordings under the same name, with
   nothing in the data to tell them apart, so they are not part of this evaluation.
 
@@ -438,16 +446,22 @@ cd image_classification
 python live_detect.py --model best.pt --camera 0   # press q to quit
 ```
 
+### Full detect → pick → sort loop
+```bash
+cd image_classification
+python fake_robot.py
+```
+Each cycle starts `detect_once.py` as a separate process, waits for one confident class, and
+then `policy_manager.py` runs the matching `lerobot-rollout` (toy → `act_sorttoy`, scrap paper
+→ `act_sortpaper_subset40`). The robot port and camera indices are set at the top of
+`policy_manager.py`.
+
 </details>
 
 **Not reproducible from this repo yet:**
 
 - **SLURM job script.** The original was lost; [`slurm/train_act.slurm`](slurm/train_act.slurm)
   is a reconstruction (see [Where we trained](#where-we-trained)).
-- **Integration loop.** The version in `image_classification/` (`fake_robot.py`,
-  `policy_manager.py`) is an early one. It replays recorded movements instead of running the
-  ACT policies, and `policy_manager.py` is missing `import sys`.
-  <!-- TODO: push the final integration code (with detection as a separate process) from the Honors laptop. -->
 
 ## License
 
