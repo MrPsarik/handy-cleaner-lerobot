@@ -1,0 +1,2858 @@
+[
+ {
+  "id": "rollout_SortToy_20260527_143413_20260610_150138#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260610_150138",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 584,
+  "seconds": 19.5,
+  "recorded": "2026-06-10T15:01",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260610_150138/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.466666666666665
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260610_150138/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.466666666666665
+   }
+  },
+  "session": "S1 10 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260610_150250#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260610_150250",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-10T15:02",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260610_150250/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260610_150250/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S1 10 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260610_150414#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260610_150414",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-10T15:04",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260610_150414/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260610_150414/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S1 10 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260610_150534#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260610_150534",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 586,
+  "seconds": 19.5,
+  "recorded": "2026-06-10T15:05",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260610_150534/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.533333333333335
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260610_150534/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.533333333333335
+   }
+  },
+  "session": "S1 10 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260610_151158#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260610_151158",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-10T15:11",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260610_151158/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260610_151158/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S1 10 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260610_151247#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260610_151247",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 1,
+  "seconds": 0.0,
+  "recorded": "2026-06-10T15:12",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260610_151247/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 0.03333333333333333
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260610_151247/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 0.03333333333333333
+   }
+  },
+  "session": "S1 10 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260610_151314#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260610_151314",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-10T15:13",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260610_151314/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260610_151314/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S1 10 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260610_151409#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260610_151409",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-10T15:14",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260610_151409/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260610_151409/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S1 10 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260610_151505#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260610_151505",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-10T15:15",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260610_151505/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260610_151505/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S1 10 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260610_151710#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260610_151710",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-10T15:17",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260610_151710/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260610_151710/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S1 10 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260610_151859#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260610_151859",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-10T15:18",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260610_151859/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260610_151859/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S1 10 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260610_151948#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260610_151948",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-10T15:19",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260610_151948/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260610_151948/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S1 10 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260610_152036#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260610_152036",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 584,
+  "seconds": 19.5,
+  "recorded": "2026-06-10T15:20",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260610_152036/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.466666666666665
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260610_152036/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.466666666666665
+   }
+  },
+  "session": "S1 10 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_141651#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_141651",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 584,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T14:16",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_141651/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.466666666666665
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_141651/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.466666666666665
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_141804#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_141804",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 1,
+  "seconds": 0.0,
+  "recorded": "2026-06-12T14:18",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_141804/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 0.03333333333333333
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_141804/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 0.03333333333333333
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_142158#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_142158",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 572,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T14:21",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_142158/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_142158/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_142536#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_142536",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 572,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T14:25",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_142536/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_142536/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_142644#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_142644",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T14:26",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_142644/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_142644/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_142736#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_142736",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T14:27",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_142736/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_142736/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_142830#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_142830",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T14:28",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_142830/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_142830/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_143020#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_143020",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T14:30",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_143020/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_143020/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_143121#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_143121",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T14:31",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_143121/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_143121/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_143256#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_143256",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 572,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T14:32",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_143256/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_143256/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_143422#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_143422",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T14:34",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_143422/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_143422/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_143537#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_143537",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T14:35",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_143537/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_143537/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_143628#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_143628",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T14:36",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_143628/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_143628/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_145025#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_145025",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T14:50",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_145025/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_145025/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_145126#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_145126",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T14:51",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_145126/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_145126/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_145244#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_145244",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T14:52",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_145244/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_145244/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_145333#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_145333",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T14:53",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_145333/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_145333/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_145437#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_145437",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T14:54",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_145437/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_145437/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_145627#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_145627",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T14:56",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_145627/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_145627/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_145725#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_145725",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T14:57",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_145725/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_145725/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_151828#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_151828",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:18",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_151828/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_151828/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_151937#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_151937",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:19",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_151937/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_151937/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_152217#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_152217",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 1,
+  "seconds": 0.0,
+  "recorded": "2026-06-12T15:22",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_152217/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 0.03333333333333333
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_152217/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 0.03333333333333333
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_152245#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_152245",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:22",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_152245/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_152245/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_152352#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_152352",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:23",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_152352/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_152352/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_152451#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_152451",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:24",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_152451/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_152451/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_152553#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_152553",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 572,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:25",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_152553/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_152553/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_152759#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_152759",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:27",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_152759/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_152759/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_152849#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_152849",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:28",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_152849/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_152849/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_153003#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_153003",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:30",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_153003/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_153003/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_153102#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_153102",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 572,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:31",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_153102/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_153102/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_153206#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_153206",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:32",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_153206/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_153206/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_153313#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_153313",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:33",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_153313/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_153313/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_153402#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_153402",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:34",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_153402/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_153402/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_153531#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_153531",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:35",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_153531/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_153531/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_153619#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_153619",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:36",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_153619/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_153619/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_153713#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_153713",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 572,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:37",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_153713/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_153713/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_153828#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_153828",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 572,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:38",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_153828/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_153828/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_153919#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_153919",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 572,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:39",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_153919/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_153919/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_154031#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_154031",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 572,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:40",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_154031/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_154031/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_154346#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_154346",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 572,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:43",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_154346/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_154346/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_154446#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_154446",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:44",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_154446/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_154446/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_154547#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_154547",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 572,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:45",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_154547/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_154547/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_154643#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_154643",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:46",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_154643/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_154643/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_154734#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_154734",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 1,
+  "seconds": 0.0,
+  "recorded": "2026-06-12T15:47",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_154734/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 0.03333333333333333
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_154734/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 0.03333333333333333
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_154859#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_154859",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:48",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_154859/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_154859/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_154802#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_154802",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 572,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:48",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_154802/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_154802/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_154955#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_154955",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:49",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_154955/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_154955/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_155043#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_155043",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:50",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_155043/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_155043/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_155131#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_155131",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 572,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:51",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_155131/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_155131/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_155256#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_155256",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:52",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_155256/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_155256/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_155400#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_155400",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:54",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_155400/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_155400/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_155454#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_155454",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:54",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_155454/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_155454/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_155607#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_155607",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 572,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:56",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_155607/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_155607/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_155700#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_155700",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:57",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_155700/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_155700/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_155810#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_155810",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:58",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_155810/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_155810/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_155859#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_155859",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T15:58",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_155859/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_155859/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_160009#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_160009",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T16:00",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_160009/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_160009/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_160107#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_160107",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T16:01",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_160107/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_160107/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_160213#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_160213",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 572,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T16:02",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_160213/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_160213/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_160314#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_160314",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T16:03",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_160314/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_160314/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_160411#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_160411",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T16:04",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_160411/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_160411/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_160548#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_160548",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T16:05",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_160548/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_160548/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_160500#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_160500",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T16:05",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_160500/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_160500/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_160638#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_160638",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 572,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T16:06",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_160638/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_160638/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_160726#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_160726",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 1,
+  "seconds": 0.0,
+  "recorded": "2026-06-12T16:07",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_160726/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 0.03333333333333333
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_160726/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 0.03333333333333333
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_160753#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_160753",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T16:07",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_160753/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_160753/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_160909#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_160909",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 573,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T16:09",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_160909/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_160909/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.1
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_161012#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_161012",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 572,
+  "seconds": 19.1,
+  "recorded": "2026-06-12T16:10",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_161012/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_161012/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.066666666666666
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_162213#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_162213",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 584,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T16:22",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_162213/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.466666666666665
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_162213/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.466666666666665
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_162306#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_162306",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 1,
+  "seconds": 0.0,
+  "recorded": "2026-06-12T16:23",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_162306/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 0.03333333333333333
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_162306/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 0.03333333333333333
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_162334#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_162334",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T16:23",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_162334/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_162334/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_162851#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_162851",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T16:28",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_162851/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_162851/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_162803#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_162803",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T16:28",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_162803/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_162803/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_163219#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_163219",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T16:32",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_163219/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_163219/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_163447#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_163447",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T16:34",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_163447/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_163447/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_163843#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_163843",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T16:38",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_163843/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_163843/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_164214#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_164214",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T16:42",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_164214/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_164214/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_164704#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_164704",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T16:47",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_164704/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_164704/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_164814#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_164814",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T16:48",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_164814/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_164814/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_164903#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_164903",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T16:49",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_164903/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_164903/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_164958#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_164958",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T16:49",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_164958/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_164958/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_165046#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_165046",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 373,
+  "seconds": 12.4,
+  "recorded": "2026-06-12T16:50",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_165046/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 12.433333333333334
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_165046/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 12.433333333333334
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_165401#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_165401",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 582,
+  "seconds": 19.4,
+  "recorded": "2026-06-12T16:54",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_165401/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.4
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_165401/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.4
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_165516#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_165516",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T16:55",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_165516/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_165516/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_165605#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_165605",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T16:56",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_165605/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_165605/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_165656#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_165656",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T16:56",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_165656/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_165656/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_165745#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_165745",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T16:57",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_165745/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_165745/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_165840#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_165840",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 583,
+  "seconds": 19.4,
+  "recorded": "2026-06-12T16:58",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_165840/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.433333333333334
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_165840/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.433333333333334
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_165934#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_165934",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 584,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T16:59",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_165934/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.466666666666665
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_165934/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.466666666666665
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_170022#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_170022",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 583,
+  "seconds": 19.4,
+  "recorded": "2026-06-12T17:00",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_170022/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.433333333333334
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_170022/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.433333333333334
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_170554#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_170554",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 426,
+  "seconds": 14.2,
+  "recorded": "2026-06-12T17:05",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_170554/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 14.2
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_170554/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 14.2
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_170647#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_170647",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 421,
+  "seconds": 14.0,
+  "recorded": "2026-06-12T17:06",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_170647/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 14.033333333333333
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_170647/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 14.033333333333333
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_170759#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_170759",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T17:07",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_170759/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_170759/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_170851#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_170851",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 259,
+  "seconds": 8.6,
+  "recorded": "2026-06-12T17:08",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_170851/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 8.633333333333333
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_170851/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 8.633333333333333
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_171324#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_171324",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 582,
+  "seconds": 19.4,
+  "recorded": "2026-06-12T17:13",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_171324/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.4
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_171324/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.4
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_171413#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_171413",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T17:14",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_171413/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_171413/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_171612#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_171612",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T17:16",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_171612/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_171612/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_171730#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_171730",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T17:17",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_171730/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_171730/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_171819#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_171819",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 584,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T17:18",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_171819/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.466666666666665
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_171819/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.466666666666665
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_171916#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_171916",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T17:19",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_171916/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_171916/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortPaper_20260529_145930_20260612_172006#0",
+  "dataset": "rollout_SortPaper_20260529_145930_20260612_172006",
+  "episode": 0,
+  "class": "paper",
+  "stage": "final",
+  "task": "Put paper into the left bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T17:20",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_172006/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortPaper_20260529_145930_20260612_172006/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_172122#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_172122",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T17:21",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_172122/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_172122/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_172222#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_172222",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T17:22",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_172222/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_172222/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_172316#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_172316",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 585,
+  "seconds": 19.5,
+  "recorded": "2026-06-12T17:23",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_172316/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_172316/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 19.5
+   }
+  },
+  "session": "S2 12 Jun"
+ },
+ {
+  "id": "rollout_SortToy_20260527_143413_20260612_172407#0",
+  "dataset": "rollout_SortToy_20260527_143413_20260612_172407",
+  "episode": 0,
+  "class": "toy",
+  "stage": "final",
+  "task": "Put toy into the right bin",
+  "frames": 328,
+  "seconds": 10.9,
+  "recorded": "2026-06-12T17:24",
+  "videos": {
+   "top": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_172407/resolve/main/videos/observation.images.top/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 10.933333333333334
+   },
+   "front": {
+    "url": "https://huggingface.co/datasets/MrPsarik/rollout_SortToy_20260527_143413_20260612_172407/resolve/main/videos/observation.images.front/chunk-000/file-000.mp4",
+    "from": 0.0,
+    "to": 10.933333333333334
+   }
+  },
+  "session": "S2 12 Jun"
+ }
+]

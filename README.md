@@ -2,8 +2,9 @@
 
 A proof-of-concept robot built on a LeRobot SO-101 arm: a YOLO11s detector recognises a toy or a
 piece of scrap paper, and an ACT policy trained for that class picks the object up and drops it
-into the matching on-board bin. The whole detect → pick → sort loop runs autonomously;
-success rate: **TBD (measured 2026-10-03)**.
+into the matching on-board bin. The whole detect → pick → sort loop runs autonomously. In 102
+recorded runs of the final policies it sorted the toy without help in 41% of runs and the
+scrap paper in 26% (see [Results](#results)).
 
 <p align="center">
   <img src="assets/demo1.gif" width="45%" alt="The arm picks up a paper ball and drops it into a side bin">
@@ -70,7 +71,15 @@ flowchart TD
   instead.
 - **Earlier datasets.** Before the base existed, tabletop datasets were recorded with a tea bag
   box starting inside a 2–3 cm radius. They were used to learn how much data ACT needs.
-<!-- TODO: was part of the ACT data held out for validation, or did the policies train on all episodes? -->
+- **No validation split.** Both final policies trained on all episodes (`dataset.episodes` is
+  unset in their `train_config.json`), so there is no held-out loss. The rollouts in Results are
+  the only evaluation.
+- **Final datasets and policies on the Hub.** Toy: dataset
+  [`MrPsarik/SortToy_20260527_143413`](https://huggingface.co/datasets/MrPsarik/SortToy_20260527_143413),
+  policy [`MrPsarik/act_sorttoy`](https://huggingface.co/MrPsarik/act_sorttoy) (50k steps).
+  Scrap paper: dataset
+  [`MrPsarik/SortPaper_20260529_145930`](https://huggingface.co/datasets/MrPsarik/SortPaper_20260529_145930),
+  policy [`MrPsarik/act_sortpaper`](https://huggingface.co/MrPsarik/act_sortpaper) (40k steps).
 
 **YOLO detector dataset:**
 
@@ -183,15 +192,52 @@ the Hugging Face Hub, which is where the numbers below come from.
 
 ## Results
 
-**End-to-end sorting.** No success rate has been measured yet. The table below will be filled
-in after the trial run.
+**End-to-end sorting (final design, June 2026).** Measured afterwards from the recordings: every
+run of the final per-class ACT policies that was saved to the Hugging Face Hub was watched and
+labelled by hand in October 2026. The labelling page, the labels and the script that builds the
+tables below are in [`eval/`](eval/) (`python eval/summarize.py`).
 
-| Class | Trials | Successes | Success rate | Missed detection | Wrong class | Missed grasp | Wrong bin | Failed recovery |
-|---|---|---|---|---|---|---|---|---|
-| Toy | TBD | TBD | TBD (measured 2026-10-03) | TBD | TBD | TBD | TBD | TBD |
-| Scrap paper | TBD | TBD | TBD (measured 2026-10-03) | TBD | TBD | TBD | TBD | TBD |
+There was no test protocol. These are all recorded runs from two sessions: S1 in the lab on
+10 June and S2 at the Demo Day stand on 12 June. Start positions and orientations were not
+controlled or written down. Each run lasts 20 s. A run counts as a success when the object ends
+up in the correct bin within those 20 s without help. Runs where a person helped by hand count
+as failures.
 
-<!-- TODO: test protocol. How many trials per class, and which start positions and orientations? -->
+| Class | Session | Runs | Success | Helped by hand | Failure | Success rate |
+|---|---|---|---|---|---|---|
+| Toy | S1, lab, 10 Jun | 4 | 3 | 0 | 1 | 3/4 |
+| Toy | S2, Demo Day stand, 12 Jun | 52 | 20 | 1 | 31 | 38% |
+| **Toy** | **both** | **56** | **23** | **1** | **32** | **41%** |
+| Scrap paper | S1, lab, 10 Jun | 8 | 1 | 3 | 4 | 1/8 |
+| Scrap paper | S2, Demo Day stand, 12 Jun | 38 | 11 | 1 | 26 | 29% |
+| **Scrap paper** | **both** | **46** | **12** | **4** | **30** | **26%** |
+
+| Failure reason | Toy | Scrap paper |
+|---|---|---|
+| Missed grasp | 27 | 17 |
+| Shaking / collision | 3 | 5 |
+| Wrong bin | 0 | 4 |
+| No attempt | 0 | 1 |
+| Other | 2 | 2 |
+| No reason given | 0 | 1 |
+
+- **Missed grasps dominate**, which matches the missing recovery behaviour described under
+  limitations. In 8 failures the arm did hold the object but it never reached the bin, and in at
+  least 5 of those the 20 s ran out.
+- **Left out (17 of 119 recordings):** 6 recordings with a single frame, 9 runs with no object in
+  reach (an empty table, or a visitor put the object down outside the arm's reach), 1 recording
+  cut short, and 1 run where the toy policy was started while scrap paper lay on the table. That
+  last one is a pipeline error, not a policy error.
+- **Background.** For the first part of S2 the scene camera looked into the exhibition hall,
+  with people moving behind the object. At about 15:25 we put a cardboard partition behind
+  the workspace. Before it 6 of 27 runs succeeded (22%), after it 25 of 63 (40%), in the same
+  direction for both classes. This fits the demonstrations being recorded against a plain
+  background, but it is not proof: the sample is small (Fisher's exact test p = 0.15), and
+  the surface under the object also changed during the first half of the day.
+- **Caveats.** The sample is small and uncontrolled, and S1 is too small to compare with S2. The
+  recordings do not store which policy checkpoint ran. The `eval_*` datasets on the Hub come from
+  earlier iterations and mix policy runs with teleoperated recordings under the same name, with
+  nothing in the data to tell them apart, so they are not part of this evaluation.
 
 **YOLO11s detector, validation set**
 
@@ -234,8 +280,9 @@ in after the trial run.
 - **One class-conditioned ACT.** Feeding the class label into a single ACT policy would have
   meant changes across LeRobot's dataset, recording, training and inference code. We kept one
   policy per class, and the two approaches were never compared.
-- **No evaluation protocol from the start.** The system was demonstrated in person, but no
-  success rate was recorded during the project. That is why the Results table is still TBD.
+- **No evaluation protocol from the start.** No success rate was recorded during the project.
+  The numbers in Results were labelled afterwards from the saved runs, so start positions are
+  unknown and the two sessions are not comparable trials.
 - **Setup and scope.** LeRobot would not install under WSL (the `evdev` build fails), so we used
   native Ubuntu. The prototype works from a fixed position; navigation, on-board compute and
   docking are future work.
@@ -401,7 +448,6 @@ python live_detect.py --model best.pt --camera 0   # press q to quit
   `policy_manager.py`) is an early one. It replays recorded movements instead of running the
   ACT policies, and `policy_manager.py` is missing `import sys`.
   <!-- TODO: push the final integration code (with detection as a separate process) from the Honors laptop. -->
-<!-- TODO: what are the Hugging Face Hub IDs of the final toy and scrap-paper datasets and policies? -->
 
 ## License
 

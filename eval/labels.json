@@ -1,0 +1,693 @@
+{
+ "rollout_SortPaper_20260529_145930_20260610_150250#0": {
+  "env": "lab",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T09:54"
+ },
+ "rollout_SortPaper_20260529_145930_20260610_150534#0": {
+  "attempts": 2,
+  "env": "lab",
+  "note": "helped by hand",
+  "outcome": "retry_success",
+  "updated": "2026-10-16T09:55"
+ },
+ "rollout_SortPaper_20260529_145930_20260610_151247#0": {
+  "env": "lab",
+  "note": "auto: recording has 1 frame, nothing to watch",
+  "outcome": "exclude",
+  "updated": "2026-10-16T10:12"
+ },
+ "rollout_SortPaper_20260529_145930_20260610_151314#0": {
+  "attempts": 2,
+  "env": "lab",
+  "note": "helped by hand",
+  "outcome": "retry_success",
+  "updated": "2026-10-16T09:56"
+ },
+ "rollout_SortPaper_20260529_145930_20260610_151409#0": {
+  "env": "lab",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T09:57"
+ },
+ "rollout_SortPaper_20260529_145930_20260610_151505#0": {
+  "env": "lab",
+  "outcome": "failure",
+  "reason": "no_attempt",
+  "updated": "2026-10-16T09:57"
+ },
+ "rollout_SortPaper_20260529_145930_20260610_151710#0": {
+  "attempts": 2,
+  "env": "lab",
+  "note": "helped by hand",
+  "outcome": "retry_success",
+  "updated": "2026-10-16T09:58"
+ },
+ "rollout_SortPaper_20260529_145930_20260610_151859#0": {
+  "env": "lab",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T09:58"
+ },
+ "rollout_SortPaper_20260529_145930_20260610_151948#0": {
+  "env": "lab",
+  "outcome": "success",
+  "updated": "2026-10-16T09:59"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_142536#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T10:00"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_142644#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T10:00"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_142736#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "shaking",
+  "updated": "2026-10-16T10:01"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_142830#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "shaking",
+  "updated": "2026-10-16T10:01"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_143020#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "shaking",
+  "updated": "2026-10-16T10:02"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_143628#0": {
+  "env": "stand",
+  "note": "grasped, but did not put it into the bin",
+  "outcome": "failure",
+  "reason": "wrong_bin",
+  "updated": "2026-10-16T10:03"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_145025#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T10:04"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_151828#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "shaking",
+  "updated": "2026-10-16T10:09"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_152352#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T10:10"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_152451#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "shaking",
+  "updated": "2026-10-16T10:10"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_152553#0": {
+  "env": "stand",
+  "note": "grasped, but did not put it into the bin",
+  "outcome": "failure",
+  "reason": "wrong_bin",
+  "updated": "2026-10-16T10:10"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_153206#0": {
+  "env": "stand",
+  "outcome": "exclude",
+  "updated": "2026-10-16T10:12",
+  "note": "no object in reach: table empty, or object put down out of reach by another person"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_153313#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T10:13"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_153402#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T10:13"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_153531#0": {
+  "env": "stand",
+  "note": "grasped, but did not put it into the bin",
+  "outcome": "failure",
+  "reason": "wrong_bin",
+  "updated": "2026-10-16T10:13"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_153713#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T10:20"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_154859#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T10:43"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_155131#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T11:10"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_155700#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T11:11"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_155810#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T11:13"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_155859#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T11:14"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_160548#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "wrong_bin",
+  "updated": "2026-10-16T11:29"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_160638#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T11:30"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_161012#0": {
+  "attempts": 2,
+  "env": "stand",
+  "note": "helped by hand",
+  "outcome": "retry_success",
+  "updated": "2026-10-16T11:31"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_162213#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T11:31"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_162306#0": {
+  "env": "stand",
+  "note": "auto: recording has 1 frame, nothing to watch",
+  "outcome": "exclude",
+  "updated": "2026-10-16T10:12"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_162334#0": {
+  "env": "stand",
+  "note": "grasped near the end, ran out of time before the bin",
+  "outcome": "failure",
+  "reason": "other",
+  "updated": "2026-10-16T11:32"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_162851#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T11:32"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_163843#0": {
+  "env": "stand",
+  "outcome": "exclude",
+  "updated": "2026-10-16T11:32",
+  "note": "no object in reach: table empty, or object put down out of reach by another person"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_164214#0": {
+  "env": "stand",
+  "outcome": "exclude",
+  "updated": "2026-10-16T11:33",
+  "note": "no object in reach: table empty, or object put down out of reach by another person"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_164704#0": {
+  "env": "stand",
+  "outcome": "exclude",
+  "updated": "2026-10-16T11:33",
+  "note": "no object in reach: table empty, or object put down out of reach by another person"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_164814#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T11:33"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_164903#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T11:33"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_164958#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T11:33"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_165046#0": {
+  "env": "stand",
+  "note": "grasped, first placing attempt failed, ran out of time on the second",
+  "outcome": "failure",
+  "updated": "2026-10-16T11:33"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_165516#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T11:35"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_165605#0": {
+  "env": "stand",
+  "note": "grasped on the third try, ran out of time before the bin",
+  "outcome": "failure",
+  "reason": "other",
+  "updated": "2026-10-16T11:35"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_165745#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T11:36"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_170022#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T11:49"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_170554#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T11:49"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_171324#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T11:50"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_171612#0": {
+  "env": "stand",
+  "outcome": "exclude",
+  "updated": "2026-10-16T11:50",
+  "note": "no object in reach: table empty, or object put down out of reach by another person"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_171730#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T11:50"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_171916#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T11:51"
+ },
+ "rollout_SortPaper_20260529_145930_20260612_172006#0": {
+  "env": "stand",
+  "outcome": "exclude",
+  "updated": "2026-10-16T11:51",
+  "note": "no object in reach: table empty, or object put down out of reach by another person"
+ },
+ "rollout_SortToy_20260527_143413_20260610_150138#0": {
+  "env": "lab",
+  "outcome": "success",
+  "updated": "2026-10-16T09:54"
+ },
+ "rollout_SortToy_20260527_143413_20260610_150414#0": {
+  "env": "lab",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T09:54"
+ },
+ "rollout_SortToy_20260527_143413_20260610_151158#0": {
+  "env": "lab",
+  "outcome": "success",
+  "updated": "2026-10-16T09:55"
+ },
+ "rollout_SortToy_20260527_143413_20260610_152036#0": {
+  "env": "lab",
+  "outcome": "success",
+  "updated": "2026-10-16T09:59"
+ },
+ "rollout_SortToy_20260527_143413_20260612_141651#0": {
+  "attempts": 2,
+  "env": "stand",
+  "note": "helped by hand",
+  "outcome": "retry_success",
+  "updated": "2026-10-16T09:59"
+ },
+ "rollout_SortToy_20260527_143413_20260612_141804#0": {
+  "env": "stand",
+  "note": "auto: recording has 1 frame, nothing to watch",
+  "outcome": "exclude",
+  "updated": "2026-10-16T10:12"
+ },
+ "rollout_SortToy_20260527_143413_20260612_142158#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T10:00"
+ },
+ "rollout_SortToy_20260527_143413_20260612_143121#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T10:02"
+ },
+ "rollout_SortToy_20260527_143413_20260612_143256#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T10:02"
+ },
+ "rollout_SortToy_20260527_143413_20260612_143422#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T10:02"
+ },
+ "rollout_SortToy_20260527_143413_20260612_143537#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T10:03"
+ },
+ "rollout_SortToy_20260527_143413_20260612_145126#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T10:04"
+ },
+ "rollout_SortToy_20260527_143413_20260612_145244#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "shaking",
+  "updated": "2026-10-16T10:05"
+ },
+ "rollout_SortToy_20260527_143413_20260612_145333#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "shaking",
+  "updated": "2026-10-16T10:05"
+ },
+ "rollout_SortToy_20260527_143413_20260612_145437#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "shaking",
+  "updated": "2026-10-16T10:08"
+ },
+ "rollout_SortToy_20260527_143413_20260612_145627#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T10:09"
+ },
+ "rollout_SortToy_20260527_143413_20260612_145725#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T10:09"
+ },
+ "rollout_SortToy_20260527_143413_20260612_151937#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T10:09"
+ },
+ "rollout_SortToy_20260527_143413_20260612_152217#0": {
+  "env": "stand",
+  "note": "auto: recording has 1 frame, nothing to watch",
+  "outcome": "exclude",
+  "updated": "2026-10-16T10:12"
+ },
+ "rollout_SortToy_20260527_143413_20260612_152245#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T10:09"
+ },
+ "rollout_SortToy_20260527_143413_20260612_152759#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T10:11"
+ },
+ "rollout_SortToy_20260527_143413_20260612_152849#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T10:11"
+ },
+ "rollout_SortToy_20260527_143413_20260612_153003#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T10:12"
+ },
+ "rollout_SortToy_20260527_143413_20260612_153102#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T10:12"
+ },
+ "rollout_SortToy_20260527_143413_20260612_153619#0": {
+  "env": "stand",
+  "note": "toy policy was started while scrap paper was on the table",
+  "outcome": "technical",
+  "updated": "2026-10-16T10:20"
+ },
+ "rollout_SortToy_20260527_143413_20260612_153828#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T10:41"
+ },
+ "rollout_SortToy_20260527_143413_20260612_153919#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T10:42"
+ },
+ "rollout_SortToy_20260527_143413_20260612_154031#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T10:42"
+ },
+ "rollout_SortToy_20260527_143413_20260612_154346#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T10:42"
+ },
+ "rollout_SortToy_20260527_143413_20260612_154446#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T10:42"
+ },
+ "rollout_SortToy_20260527_143413_20260612_154547#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T10:42"
+ },
+ "rollout_SortToy_20260527_143413_20260612_154643#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T10:43"
+ },
+ "rollout_SortToy_20260527_143413_20260612_154734#0": {
+  "env": "stand",
+  "note": "auto: recording has 1 frame, nothing to watch",
+  "outcome": "exclude",
+  "updated": "2026-10-16T10:12"
+ },
+ "rollout_SortToy_20260527_143413_20260612_154802#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T10:43"
+ },
+ "rollout_SortToy_20260527_143413_20260612_154955#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T10:43"
+ },
+ "rollout_SortToy_20260527_143413_20260612_155043#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T10:43"
+ },
+ "rollout_SortToy_20260527_143413_20260612_155256#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T11:10"
+ },
+ "rollout_SortToy_20260527_143413_20260612_155400#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T11:10"
+ },
+ "rollout_SortToy_20260527_143413_20260612_155454#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T11:11"
+ },
+ "rollout_SortToy_20260527_143413_20260612_155607#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T11:11"
+ },
+ "rollout_SortToy_20260527_143413_20260612_160009#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T11:14"
+ },
+ "rollout_SortToy_20260527_143413_20260612_160107#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T11:26"
+ },
+ "rollout_SortToy_20260527_143413_20260612_160213#0": {
+  "env": "stand",
+  "note": "grasped, ran out of time before the bin",
+  "outcome": "failure",
+  "reason": "other",
+  "updated": "2026-10-16T11:26"
+ },
+ "rollout_SortToy_20260527_143413_20260612_160314#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T11:29"
+ },
+ "rollout_SortToy_20260527_143413_20260612_160411#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T11:29"
+ },
+ "rollout_SortToy_20260527_143413_20260612_160500#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T11:30"
+ },
+ "rollout_SortToy_20260527_143413_20260612_160726#0": {
+  "env": "stand",
+  "note": "auto: recording has 1 frame, nothing to watch",
+  "outcome": "exclude",
+  "updated": "2026-10-16T10:12"
+ },
+ "rollout_SortToy_20260527_143413_20260612_160753#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T11:30"
+ },
+ "rollout_SortToy_20260527_143413_20260612_160909#0": {
+  "env": "stand",
+  "note": "grasped after a retry, ran out of time before the bin",
+  "outcome": "failure",
+  "reason": "other",
+  "updated": "2026-10-16T11:30"
+ },
+ "rollout_SortToy_20260527_143413_20260612_162803#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T11:32"
+ },
+ "rollout_SortToy_20260527_143413_20260612_163219#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T11:32"
+ },
+ "rollout_SortToy_20260527_143413_20260612_163447#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T11:32"
+ },
+ "rollout_SortToy_20260527_143413_20260612_165401#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T11:34"
+ },
+ "rollout_SortToy_20260527_143413_20260612_165656#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T11:36"
+ },
+ "rollout_SortToy_20260527_143413_20260612_165840#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T11:49"
+ },
+ "rollout_SortToy_20260527_143413_20260612_165934#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T11:49"
+ },
+ "rollout_SortToy_20260527_143413_20260612_170647#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T11:49"
+ },
+ "rollout_SortToy_20260527_143413_20260612_170759#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T11:49"
+ },
+ "rollout_SortToy_20260527_143413_20260612_170851#0": {
+  "env": "stand",
+  "note": "recording cut short",
+  "outcome": "exclude",
+  "updated": "2026-10-16T11:50"
+ },
+ "rollout_SortToy_20260527_143413_20260612_171413#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T11:50"
+ },
+ "rollout_SortToy_20260527_143413_20260612_171819#0": {
+  "env": "stand",
+  "outcome": "exclude",
+  "updated": "2026-10-16T11:50",
+  "note": "no object in reach: table empty, or object put down out of reach by another person"
+ },
+ "rollout_SortToy_20260527_143413_20260612_172122#0": {
+  "env": "stand",
+  "outcome": "success",
+  "updated": "2026-10-16T11:51"
+ },
+ "rollout_SortToy_20260527_143413_20260612_172222#0": {
+  "env": "stand",
+  "outcome": "failure",
+  "reason": "missed_grasp",
+  "updated": "2026-10-16T11:51"
+ },
+ "rollout_SortToy_20260527_143413_20260612_172316#0": {
+  "env": "stand",
+  "outcome": "exclude",
+  "updated": "2026-10-16T11:51",
+  "note": "no object in reach: table empty, or object put down out of reach by another person"
+ },
+ "rollout_SortToy_20260527_143413_20260612_172407#0": {
+  "env": "stand",
+  "outcome": "exclude",
+  "updated": "2026-10-16T11:51",
+  "note": "no object in reach: table empty, or object put down out of reach by another person"
+ }
+}

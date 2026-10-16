@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rollout labelling</title>
+<style>
+  :root {
+    --bg: #161616; --panel: #1f1f1f; --line: #333; --text: #ddd; --muted: #8a8a8a;
+    --accent: #d77757; --ok: #5fb760; --retry: #c9b24a; --fail: #d65a5a;
+    --tech: #6f8fd6; --excl: #777;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 14px/1.4 system-ui, sans-serif; height: 100vh; display: flex; }
+  aside { width: 300px; border-right: 1px solid var(--line); overflow-y: auto; flex: none; }
+  main { flex: 1; overflow-y: auto; padding: 14px 18px; min-width: 0; }
+  h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted);
+       margin: 14px 12px 6px; }
+  .ep { display: flex; gap: 8px; align-items: center; padding: 3px 12px; cursor: pointer;
+        font-size: 13px; white-space: nowrap; }
+  .ep:hover { background: #262626; }
+  .ep.cur { background: #33302d; outline: 1px solid var(--accent); }
+  .dot { width: 9px; height: 9px; border-radius: 50%; border: 1px solid #555; flex: none; }
+  .success { background: var(--ok); border-color: var(--ok); }
+  .retry_success { background: var(--retry); border-color: var(--retry); }
+  .failure { background: var(--fail); border-color: var(--fail); }
+  .technical { background: var(--tech); border-color: var(--tech); }
+  .exclude { background: var(--excl); border-color: var(--excl); }
+  .ep .meta { color: var(--muted); overflow: hidden; text-overflow: ellipsis; }
+  .vids { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .vids figure { margin: 0; }
+  .vids figcaption { color: var(--muted); font-size: 12px; }
+  video { width: 100%; background: #000; aspect-ratio: 4 / 3; display: block; }
+  .bar { display: flex; gap: 8px; align-items: center; margin: 8px 0; flex-wrap: wrap; }
+  input[type=range] { flex: 1; min-width: 200px; accent-color: var(--accent); }
+  button, select, input[type=number], textarea {
+    background: var(--panel); color: var(--text); border: 1px solid var(--line);
+    border-radius: 5px; padding: 5px 9px; font: inherit; }
+  button { cursor: pointer; }
+  button:hover { border-color: #555; }
+  button.on { border-color: var(--accent); background: #3a2b25; }
+  .head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+          flex-wrap: wrap; }
+  .head h1 { font-size: 17px; margin: 0; }
+  .head .sub { color: var(--muted); font-size: 13px; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+           padding: 12px; margin-top: 10px; }
+  .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin: 6px 0; }
+  .row > label { width: 90px; color: var(--muted); }
+  .outcomes button { min-width: 120px; }
+  .outcomes button kbd { color: var(--muted); margin-right: 4px; }
+  textarea { width: 100%; min-height: 54px; resize: vertical; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  th, td { padding: 4px 8px; border-bottom: 1px solid var(--line); text-align: right; }
+  th:first-child, td:first-child, th:nth-child(2), td:nth-child(2) { text-align: left; }
+  th { color: var(--muted); font-weight: normal; }
+  .keys { color: var(--muted); font-size: 12px; }
+  .saved { color: var(--muted); font-size: 12px; }
+  .hidden { display: none; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<aside id="list"></aside>
+<main>
+  <div class="head">
+    <h1 id="title">Loading…</h1>
+    <span class="sub" id="sub"></span>
+  </div>
+
+  <div class="vids">
+    <figure><video id="vTop" muted playsinline preload="auto"></video><figcaption>top (gripper)</figcaption></figure>
+    <figure><video id="vFront" muted playsinline preload="auto"></video><figcaption>front (base)</figcaption></figure>
+  </div>
+  <div class="bar">
+    <button id="play">▶</button>
+    <span id="time" style="min-width:90px">0.0 / 0.0 s</span>
+    <input type="range" id="seek" min="0" max="1000" value="0">
+    <select id="speed">
+      <option>0.5</option><option selected>1</option><option>1.5</option><option>2</option><option>3</option><option>4</option>
+    </select>
+    <button id="restart" title="R">⟲</button>
+    <a id="hf" target="_blank">HF viewer</a>
+  </div>
+
+  <div class="panel">
+    <div class="row outcomes" id="outcomes"></div>
+    <div class="row" id="reasonRow"><label>Failure</label><span id="reasons"></span></div>
+    <div class="row" id="attemptsRow"><label>Attempts</label>
+      <input type="number" id="attempts" min="1" max="20" style="width:70px">
+      <span class="keys">grasp attempts in this episode, including the successful one</span></div>
+    <div class="row"><label>Setting</label><span id="envs"></span>
+      <input id="envOther" placeholder="other setting…" style="width:180px" class="hidden"></div>
+    <div class="row"><label>Note</label></div>
+    <textarea id="note" placeholder="What happened (N to focus, Esc to leave)"></textarea>
+    <div class="row" style="justify-content:space-between">
+      <span class="keys">Space play/pause · ←/→ ±2 s · [ ] speed · R restart · 1–5 outcome ·
+        J/K or ↓/↑ next/prev · U next unlabelled · N note</span>
+      <span class="saved" id="saved"></span>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="row" style="justify-content:space-between">
+      <strong>Results</strong>
+      <span><button id="csv">Export CSV</button></span>
+    </div>
+    <div id="stats"></div>
+    <p class="keys">First-try rate = success / counted. With retry = (success + success after retry) / counted.
+      Counted excludes technical issues and excluded episodes.</p>
+  </div>
+</main>
+
+<script>
+const OUTCOMES = [
+  ["success", "Success"],
+  ["retry_success", "Success after retry"],
+  ["failure", "Failure"],
+  ["technical", "Technical issue"],
+  ["exclude", "Don't count"],
+];
+const REASONS = [
+  ["missed_grasp", "missed grasp"], ["dropped", "dropped object"], ["wrong_bin", "wrong bin / missed bin"],
+  ["no_attempt", "no attempt / froze"], ["shaking", "shaking / collision"], ["other", "other"],
+];
+const ENVS = [["lab", "lab"], ["stand", "stand (new environment)"], ["other", "other"]];
+
+let items = [], labels = {}, cur = 0, saveTimer = null;
+const $ = id => document.getElementById(id);
+const vTop = $("vTop"), vFront = $("vFront");
+
+function label(it) { return labels[it.id] || (labels[it.id] = {}); }
+function isLabelled(it) { return labels[it.id] && labels[it.id].outcome; }
+
+function buildList() {
+  const box = $("list"); box.innerHTML = "";
+  let session = null;
+  items.forEach((it, i) => {
+    if (it.session !== session) {
+      session = it.session;
+      const h = document.createElement("h2");
+      const n = items.filter(x => x.session === session).length;
+      h.textContent = `${session} · ${n}`;
+      box.appendChild(h);
+    }
+    const d = document.createElement("div");
+    d.className = "ep"; d.dataset.i = i;
+    d.innerHTML = `<span class="dot"></span><span>${it.recorded.slice(11) || ""} ${it.stage === "final" ? it.class : "#" + it.episode}</span>` +
+                  `<span class="meta">${it.seconds}s</span>`;
+    d.onclick = () => show(i);
+    box.appendChild(d);
+  });
+  refreshList();
+}
+
+function refreshList() {
+  document.querySelectorAll(".ep").forEach(d => {
+    const it = items[d.dataset.i], l = labels[it.id];
+    d.querySelector(".dot").className = "dot " + (l && l.outcome ? l.outcome : "");
+    d.classList.toggle("cur", +d.dataset.i === cur);
+  });
+}
+
+function rangeOf(v) { return v.dataset.from !== undefined ? [+v.dataset.from, +v.dataset.to] : [0, 0]; }
+
+function load(v, src) {
+  if (!src) { v.removeAttribute("src"); v.load(); v.parentElement.classList.add("hidden"); return; }
+  v.parentElement.classList.remove("hidden");
+  v.dataset.from = src.from; v.dataset.to = src.to;
+  const want = src.url;
+  if (v.src !== want) { v.src = want; }
+  const go = () => { v.currentTime = src.from; };
+  if (v.readyState >= 1 && v.src === want) go(); else v.addEventListener("loadedmetadata", go, { once: true });
+  v.playbackRate = +$("speed").value;
+}
+
+function show(i) {
+  cur = Math.max(0, Math.min(items.length - 1, i));
+  const it = items[cur];
+  vTop.pause(); vFront.pause();
+  load(vTop, it.videos.top); load(vFront, it.videos.front);
+  $("title").textContent = `${it.stage === "final" ? (it.class === "toy" ? "Toy" : "Scrap paper") : it.class}`;
+  $("sub").textContent = `${it.session} · ${it.dataset} ep ${it.episode} · ${it.recorded.replace("T", " ")} · ${it.seconds}s · “${it.task}”`;
+  $("hf").href = `https://huggingface.co/spaces/lerobot/visualize_dataset?path=MrPsarik/${it.dataset}/episode_${it.episode}`;
+  const l = labels[it.id] || {};
+  // Setting is sticky: an unlabelled episode inherits the previous episode's setting in the same session.
+  if (!l.env) {
+    const prev = items.slice(0, cur).reverse().find(x => x.session === it.session && labels[x.id] && labels[x.id].env);
+    if (prev) { const p = labels[prev.id]; label(it).env = p.env; if (p.envOther) label(it).envOther = p.envOther; }
+  }
+  renderForm(); refreshList();
+  document.querySelector(".ep.cur")?.scrollIntoView({ block: "nearest" });
+  setTimeout(() => vTop.play().catch(() => {}), 50);
+}
+
+function renderForm() {
+  const l = labels[items[cur].id] || {};
+  $("outcomes").querySelectorAll("button").forEach(b => b.classList.toggle("on", b.dataset.v === l.outcome));
+  $("reasonRow").classList.toggle("hidden", l.outcome !== "failure");
+  $("reasons").querySelectorAll("button").forEach(b => b.classList.toggle("on", b.dataset.v === l.reason));
+  $("attemptsRow").classList.toggle("hidden", l.outcome !== "retry_success");
+  $("attempts").value = l.attempts || "";
+  $("envs").querySelectorAll("button").forEach(b => b.classList.toggle("on", b.dataset.v === l.env));
+  $("envOther").classList.toggle("hidden", l.env !== "other");
+  $("envOther").value = l.envOther || "";
+  $("note").value = l.note || "";
+}
+
+function set(field, value) {
+  const l = label(items[cur]);
+  if (value === "" || value === undefined) delete l[field]; else l[field] = value;
+  if (field === "outcome") {
+    if (value !== "failure") delete l.reason;
+    if (value !== "retry_success") delete l.attempts;
+    else if (!l.attempts) l.attempts = 2;
+  }
+  l.updated = new Date().toISOString().slice(0, 16);
+  renderForm(); refreshList(); renderStats(); save();
+}
+
+function save() {
+  clearTimeout(saveTimer);
+  $("saved").textContent = "saving…";
+  saveTimer = setTimeout(async () => {
+    const clean = Object.fromEntries(Object.entries(labels).filter(([, v]) => v.outcome || v.note || v.env));
+    try {
+      const r = await fetch("/labels", { method: "POST", body: JSON.stringify(clean) });
+      $("saved").textContent = r.ok ? "saved " + new Date().toLocaleTimeString() : "SAVE FAILED";
+    } catch { $("saved").textContent = "SAVE FAILED (server down?)"; }
+  }, 300);
+}
+
+function buttons(box, list, field) {
+  list.forEach(([v, text], k) => {
+    const b = document.createElement("button");
+    b.dataset.v = v;
+    b.innerHTML = field === "outcome" ? `<kbd>${k + 1}</kbd>${text}` : text;
+    b.onclick = () => set(field, labels[items[cur].id]?.[field] === v && field !== "outcome" ? "" : v);
+    box.appendChild(b);
+  });
+}
+
+function settingName(l) { return l.env === "other" ? (l.envOther || "other") : (l.env || "—"); }
+
+function renderStats() {
+  const groups = {};
+  items.forEach(it => {
+    const l = labels[it.id]; if (!l || !l.outcome) return;
+    const key = `${it.stage === "final" ? "final" : it.dataset}|${it.class}|${settingName(l)}`;
+    const g = groups[key] || (groups[key] = { success: 0, retry_success: 0, failure: 0, technical: 0, exclude: 0, reasons: {} });
+    g[l.outcome]++;
+    if (l.outcome === "failure") g.reasons[l.reason || "unspecified"] = (g.reasons[l.reason || "unspecified"] || 0) + 1;
+  });
+  const done = items.filter(isLabelled).length;
+  let h = `<p class="keys">${done} / ${items.length} labelled</p><table><tr><th>Stage · class</th><th>Setting</th>` +
+          `<th>Counted</th><th>Success</th><th>After retry</th><th>Failure</th><th>Tech</th><th>Excl.</th>` +
+          `<th>First-try</th><th>With retry</th></tr>`;
+  Object.keys(groups).sort().forEach(k => {
+    const [stage, cls, env] = k.split("|"), g = groups[k];
+    const n = g.success + g.retry_success + g.failure;
+    const pct = x => n ? Math.round(100 * x / n) + "%" : "—";
+    const reasons = Object.entries(g.reasons).map(([r, c]) => `${r} ${c}`).join(", ");
+    h += `<tr><td>${stage} · ${cls}</td><td>${env}</td><td>${n}</td><td>${g.success}</td><td>${g.retry_success}</td>` +
+         `<td title="${reasons}">${g.failure}</td><td>${g.technical}</td><td>${g.exclude}</td>` +
+         `<td>${pct(g.success)}</td><td>${pct(g.success + g.retry_success)}</td></tr>`;
+  });
+  $("stats").innerHTML = h + "</table>";
+}
+
+function exportCsv() {
+  const cols = ["id", "dataset", "episode", "stage", "class", "session", "recorded", "seconds",
+                "outcome", "reason", "attempts", "setting", "note"];
+  const q = s => `"${String(s ?? "").replace(/"/g, '""')}"`;
+  const rows = items.map(it => {
+    const l = labels[it.id] || {};
+    return [it.id, it.dataset, it.episode, it.stage, it.class, it.session, it.recorded, it.seconds,
+            l.outcome, l.reason, l.attempts, l.env ? settingName(l) : "", l.note].map(q).join(",");
+  });
+  const blob = new Blob([[cols.join(","), ...rows].join("\n")], { type: "text/csv" });
+  const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "rollout_labels.csv"; a.click();
+}
+
+// Playback: the top camera drives, the front camera follows; both stop at the episode's end.
+function tick() {
+  const [from, to] = rangeOf(vTop), len = Math.max(0.01, to - from);
+  const t = vTop.currentTime - from;
+  if (vTop.currentTime >= to - 0.03 && !vTop.paused) { vTop.pause(); vTop.currentTime = to - 0.03; }
+  if (!vFront.parentElement.classList.contains("hidden")) {
+    const [ff] = rangeOf(vFront), want = ff + t;
+    if (Math.abs(vFront.currentTime - want) > 0.15) vFront.currentTime = want;
+    if (vTop.paused !== vFront.paused) vTop.paused ? vFront.pause() : vFront.play().catch(() => {});
+    vFront.playbackRate = vTop.playbackRate;
+  }
+  $("seek").value = Math.round(1000 * Math.min(1, Math.max(0, t / len)));
+  $("time").textContent = `${Math.max(0, t).toFixed(1)} / ${len.toFixed(1)} s`;
+  $("play").textContent = vTop.paused ? "▶" : "❚❚";
+  requestAnimationFrame(tick);
+}
+function togglePlay() {
+  const [, to] = rangeOf(vTop);
+  if (vTop.paused) { if (vTop.currentTime >= to - 0.1) restart(); vTop.play(); } else vTop.pause();
+}
+function restart() { const [from] = rangeOf(vTop); vTop.currentTime = from; }
+function seekBy(s) { const [from, to] = rangeOf(vTop); vTop.currentTime = Math.min(to - 0.05, Math.max(from, vTop.currentTime + s)); }
+function setSpeed(dir) {
+  const sel = $("speed"); sel.selectedIndex = Math.max(0, Math.min(sel.options.length - 1, sel.selectedIndex + dir));
+  vTop.playbackRate = +sel.value;
+}
+
+$("play").onclick = togglePlay;
+$("restart").onclick = restart;
+$("speed").onchange = () => { vTop.playbackRate = +$("speed").value; };
+$("seek").oninput = e => { const [from, to] = rangeOf(vTop); vTop.currentTime = from + (to - from) * e.target.value / 1000; };
+$("attempts").onchange = e => set("attempts", e.target.value ? +e.target.value : "");
+$("envOther").onchange = e => set("envOther", e.target.value.trim());
+$("note").oninput = e => { label(items[cur]).note = e.target.value; save(); };
+$("csv").onclick = exportCsv;
+
+document.addEventListener("keydown", e => {
+  if (e.target.matches("textarea, input:not([type=range])")) { if (e.key === "Escape") e.target.blur(); return; }
+  const k = e.key;
+  if (k === " ") { e.preventDefault(); togglePlay(); }
+  else if (k >= "1" && k <= "5") set("outcome", OUTCOMES[+k - 1][0]);
+  else if (k === "j" || k === "ArrowDown") { e.preventDefault(); show(cur + 1); }
+  else if (k === "k" || k === "ArrowUp") { e.preventDefault(); show(cur - 1); }
+  else if (k === "ArrowRight") seekBy(2);
+  else if (k === "ArrowLeft") seekBy(-2);
+  else if (k === "]") setSpeed(1);
+  else if (k === "[") setSpeed(-1);
+  else if (k === "r") restart();
+  else if (k === "n") { e.preventDefault(); $("note").focus(); }
+  else if (k === "u") { const i = items.findIndex((x, j) => j > cur && !isLabelled(x)); if (i >= 0) show(i); }
+});
+
+(async () => {
+  items = await (await fetch("manifest.json")).json();
+  labels = await (await fetch("/labels")).json();
+  buttons($("outcomes"), OUTCOMES, "outcome");
+  buttons($("reasons"), REASONS, "reason");
+  buttons($("envs"), ENVS, "env");
+  buildList(); renderStats();
+  const first = items.findIndex(x => !isLabelled(x));
+  show(first >= 0 ? first : 0);
+  requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>
